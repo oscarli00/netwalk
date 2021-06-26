@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Netwalk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/threeSource.png">
+</head>
+
+<body>
+    <h1>Netwalk</h1>
+    <div>
+        <label>Difficulty:</label>
+        <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button onclick="newGame()">New Game</button>
+        <button id="helpBtn">How to Play</button>
+    </div>
+
+
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h3>How to play Netwalk</h3>
+            </div>
+            <p>Rotate the tiles so that every tile has a connection to the power source. <br />
+                Note: the board is wrapping which means connections at the edge of the board are able to connect to the
+                opposite edge.</p>
+            <ul>
+                <li>Left click: rotate counterclockwise</li>
+                <li>Right click: rotate clockwise</li>
+                <li>Middle mouse button / Spacebar: lock rotation</li>
+            </ul>
+            <p>Still need more help? <a href="help.html" target="_blank">Click here</a></p>
+        </div>
+    </div>
+    <div id="game">
+        <canvas id="game-canvas" tabindex="1" width="210" height="210"></canvas>
+    </div>
+    <div>
+        <button onclick="showSolution()">Show Solution</button>
+    </div>
+    <div>
+        <p id="timer-text">Time elapsed</p>
+    </div>
+    
+    <div>
+        <table id="scores-table">
+            <tr>
+                <th colspan="9">Weekly Leaderboard</th>
+            </tr>
+            <tr>
+                <th colspan="3">Easy</th>
+                <th colspan="3">Medium</th>
+                <th colspan="3">Hard</th>
+            </tr>
+            <tr class="column-headers">
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>1.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>1.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>1.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>2.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>2.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>2.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>3.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>3.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>3.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>4.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>4.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>4.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>5.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>5.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>5.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>6.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>6.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>6.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>7.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>7.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>7.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>8.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>8.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>8.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>9.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>9.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>9.</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class='table-entry'>
+                <td class='rank'>10.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>10.</td>
+                <td></td>
+                <td></td>
+                <td class='rank'>10.</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

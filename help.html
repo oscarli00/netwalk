@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>How to beat Netwalk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/threeSource.png">
+</head>
+
+<body id="help">
+    <h1>Tips and tricks to beat Netwalk</h1>
+    <p>
+        The idea behind Netwalk is similar to Minesweeper in that the player should use deductive reasoning to work
+        their way through the puzzle. This implies heavy usage of the locking function (which is activated by pressing
+        spacebar or the middle-mouse button).
+    </p>
+    <p>
+        What is meant by deductive reasoning in this context? It means identifying scenarios in which a tile can only
+        have a single correct orientation. Some examples are shown further down the page.
+    </p>
+    <p>
+        Before continuing, the player should know two important rules about the puzzle. The first rule is that the correct
+        solution will have just enough connections for every tile to be lit with no extra edges left over. This leads to
+        the second rule which is that a correct solution will have no closed loops. To verify that this is true, feel
+        free to generate some puzzles and have a look at the solutions. For those wondering why, it is because the
+        solution to the puzzle is a <a href="https://en.wikipedia.org/wiki/Spanning_tree" target="_blank">spanning
+            tree</a>.
+    </p>
+    <p>As an example, we will be using a section taken out of a random game. The tiles have been numbered in the first
+        image for future reference.</p>
+    <figure>
+        <img src="assets/examples/1.png">
+        <figcaption><i>A section of a puzzle.</i></figcaption>
+    </figure>
+    <p>
+        The image above shows a situation in which a straight connection (tile 4) sits in between two head connections
+        (tiles 5 and 6). Since a puzzle cannot be complete unless every tile has a connection to the power source, the
+        straight connection has
+        only one possible correct orientation. As a result, the tile can be locked in the vertical position as seen
+        below:
+    </p>
+    <figure>
+        <img src="assets/examples/2.png">
+        <figcaption><i>Locking tile 5.</i></figcaption>
+    </figure>
+    <p>
+        This new piece of information allows for another deduction to be made. It now becomes apparent that the unlocked
+        straight connection (tile 8) below the locked one must also be in the same orientation otherwise we violate the
+        first rule i.e. The correct solution should have no extra edges left over. By the same logic, tile 2 must also
+        be connected to tile 5 as well.
+    </p>
+    <figure>
+        <img src="assets/examples/3.png">
+        <figcaption><i>Locking tile 8 and tile 2.</i></figcaption>
+    </figure>
+    <p>
+        Using rule 1 again allows for tile 7 to be locked in the vertical position. It follows that tile 4 can also be
+        locked after connecting to tile 7.
+    </p>
+    <figure>
+        <img src="assets/examples/4.png">
+        <figcaption><i>Locking tile 4 and tile 7.</i></figcaption>
+    </figure>
+    <p>
+        The same idea also applies to tile 3 and tile 6.
+    </p>
+    <figure>
+        <img src="assets/examples/5.png">
+        <figcaption><i>Locking tile 3 and tile 6.</i></figcaption>
+    </figure>
+    <p>
+        Now there are no more deductions able to be made without seeing the rest of the puzzle.
+    </p>
+    <p>
+        The examples shown above only represent a small subset of the many possible situations that can be encountered
+        in Netwalk. As such, the purpose of this is to serve as a starting point so that the player may begin to identify and solve these patterns for themselves and eventually culminating into a complete solution. Hopefully this page has been helpful :)
+    </p>
+</body>
+</html>

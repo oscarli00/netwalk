@@ -1,0 +1,100 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    background-color: rgb(148, 148, 148);
+    text-align: center;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: lightgrey;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.modal-header {
+    padding: 1px;
+    text-align: center;
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#game {
+    padding-top: 10px;
+}
+
+#game-canvas {
+    outline: 0;
+} 
+
+#timer-text {
+    visibility: hidden;
+    margin: 5px;
+}
+
+#scores-table {
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column-headers {
+    text-align:left;
+}
+
+.table-entry {
+    text-align: left;
+    /* font-size: small; */
+}
+
+.rank {
+    text-align: right;
+}
+
+table, th,td {
+    border: 1px solid black;
+}
+
+#help {
+    text-align: left;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure {
+  text-align: center;
+}
