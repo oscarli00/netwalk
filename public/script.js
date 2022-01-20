@@ -9,7 +9,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 var database = firebase.database();
 var leaderboardRef = database.ref("leaderboard");
@@ -461,7 +460,6 @@ window.onload = async () => {
     canvas.oncontextmenu = function (e) {
         e.preventDefault();
     }
-    canvas.style.background = "lightgrey";
     ctx = canvas.getContext("2d");
     difficultyElement = document.getElementById("difficulty");
     timerText = document.getElementById("timer-text");

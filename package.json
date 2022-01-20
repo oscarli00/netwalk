@@ -1,0 +1,17 @@
+{
+  "name": "netwalk",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^8.2.9",
+    "firebase-admin": "^9.10.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

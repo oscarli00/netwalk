@@ -1,0 +1,183 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: rgb(148, 148, 148);
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 6em;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: lightgrey;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 4px;
+}
+
+.modal-header {
+    padding: 1px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#game {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#game-canvas {
+    outline: 0;
+    background-color: #FCFCFD;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+}
+
+#timer-text {
+    visibility: hidden;
+    margin: 5px;
+}
+
+#scores-table {
+    margin-top: 30px;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column-headers {
+    text-align: left;
+}
+
+.table-entry {
+    text-align: left;
+    /* font-size: small; */
+}
+
+.rank {
+    text-align: right;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+#help {
+    text-align: left;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure {
+    text-align: center;
+}
+
+button {
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    height: 28px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: box-shadow .15s, transform .15s;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 14px;
+}
+
+button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+select {
+    text-align: left;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    border-width: 0;
+    height: 28px;
+    border-radius: 4px;
+    padding-left: 8px;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    font-size: 14px;
+    transition: box-shadow .15s;
+}
+
+select:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+select:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+}
+
+table, tr, th, td {
+    border-radius: 4px;
+}
