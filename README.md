@@ -14,3 +14,6 @@ The way the puzzle generation works is by starting with a completed board then r
 * Pick a random vertex, V1, from G which is also in T, then pick a random edge E from V1 that connects to another vertex, V2, in G. 
 
 * If V2 is not currently in T then add E and V2 to T. If T contains all the vertices from G then T is a spanning tree and we are done, otherwise go back to the previous step.
+
+### Things to consider for the future
+Currently, submissions to the leaderboard do not require any form of verification. This allows for players to spoof scores by simply writing to the public database. I've currently set up the database to automatically reset every week so that the leaderboard does not get filled with fake scores. One way to combat this is to generate the puzzles on the server and give each puzzle a unique id and creation timestamp. Once the user has completed the puzzle, the puzzle id and solution will be sent to the server to be verified before allowing the user to submit their name to the leaderboard. However, this is unlikely to be implemented as I am no longer actively working on this project.
